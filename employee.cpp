@@ -58,16 +58,22 @@ class employee
 
 int main()
 {
-    
-    employee e1("Rose",1000,22);
-    e1.set_leave(true);
-    e1.set_leave(false);
-    e1.set_leave(true);
-    e1.set_working_days();
-    printf("Employee 1 details:\n");
-    cout<<e1.get_name()<<endl;
-    cout<<e1.get_id()<<endl;
-    cout<<e1.get_working_days()<<endl;
-    cout<<e1.get_sick_leave()<<endl;
-
+    int i;
+    employee e[2]=
+    { employee("Rose",1000,22),
+      employee("Chris",403,22)
+    };
+    e[0].set_leave(true);
+    e[1].set_leave(true);
+    e[1].set_leave(true);
+    e[1].set_working_days();
+    e[0].set_working_days();
+    for(i=0;i<2;i++)
+    {
+    printf("Employee %d details:\n",i);
+    cout<<e[i].get_name()<<endl;
+    cout<<e[i].get_id()<<endl;
+    cout<<e[i].get_working_days()<<endl;
+    cout<<e[i].get_sick_leave()<<endl;
+    }
 }
